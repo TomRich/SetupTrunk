@@ -1,3 +1,10 @@
+img {
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	vertical-align: middle;
+}
+
 body {
 	background-color: #F0F0F0;
 	
@@ -28,9 +35,6 @@ a {text-decoration: none;}
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
 }
-
-
-
 
 header {
 	height: 60px;
@@ -127,11 +131,33 @@ nav li a:hover {
 }
 
 .products {
-	height: 100%;
-	width: 100%;
 	background: #f0f0f0;
 }
 
+.wrapper {
+	margin: 0px auto;
+	width: 100%;
+}
+
+.tile {
+	float: left;
+	width: 270px;
+	margin-top: 50px;
+	margin-left: 30px;
+	margin-bottom: 25px;
+	text-align: center;
+	position: relative;
+}
+
+.item {
+	vertical-align: middle;
+	display: inline-block;
+	background-color: #e3e1e1;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding: 20px 14px 14px 14px;
+}
 
 
 

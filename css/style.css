@@ -190,6 +190,19 @@ h3 a:hover {
 	color: #4885b1;
 }
 
+.tile p a {
+	color: #606970;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition:.5s;
+}
+
+.tile p a:hover {
+	color: #4885b1;
+}
+
 h6 {
 	padding-top: 9px;
 	font-size: 14px;

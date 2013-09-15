@@ -8,9 +8,10 @@ img {
 body {
 	background-color: #F0F0F0;
 	
-	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font: 13px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #9aa6af;
 	text-rendering: optimizelegibility;
+	z-index: 0;
 	
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 	-webkit-text-size-adjust: none;
@@ -28,7 +29,10 @@ a {text-decoration: none;}
 
 .container {
 	overflow: hidden;
+	min-height: 100%;
 	background-color: #F0F0F0;
+	background-size: cover;
+	z-index: 1;
 
 /*  Prevents Flickering  */
 	-webkit-backface-visibility: hidden;
@@ -132,16 +136,18 @@ nav li a:hover {
 
 .products {
 	background: #f0f0f0;
+	padding-bottom: 220px;
 }
 
 .wrapper {
 	margin: 0px auto;
-	width: 100%;
+	width: 80%;
+	background: #f0f0f0;
 }
 
 .tile {
 	float: left;
-	width: 270px;
+	width: 43%;
 	margin-top: 50px;
 	margin-left: 30px;
 	margin-bottom: 25px;
@@ -159,15 +165,82 @@ nav li a:hover {
 	padding: 20px 14px 14px 14px;
 }
 
+h3 {
+	padding-top: 9px;
+	padding-bottom: 9px;
+	font-size: 18px;
+}
 
+h3 a {
+	color: #697279;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition:.5s;
+}
 
+h3 a:hover {
+	color: #4885b1;
+}
 
+h6 {
+	padding-top: 9px;
+	font-size: 13px;
+}
+
+h6 a {
+	color: #697279;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition:.5s;
+}
+
+h6 a:hover {
+	color: #4885b1;
+}
+
+#footer {
+	height: 130px;
+	width: 100%;
+	background-color: #356aa4;
+	position: absolute;
+	bottom: 0;
+}
+
+#footer p {
+	width: 90%;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 65px;
+}
+
+#footer a {
+	color: #2d2d2d;
+	-o-transition:.5s;
+  	-ms-transition:.5s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.5s;
+  	transition:.5s;
+}
+
+#footer a:hover {
+	color: #404040;
+}
 
 @media only screen and (max-width: 780px) {
 
 header {
 	height: 60px;
-	z-index: 2;
+	z-index: 3;
 	background-color: #313945;
 	
 	position: fixed;
@@ -221,6 +294,7 @@ nav li:first-child a:hover
 {border-radius: 10px 0 0 0;}
 
 .contentcontainer {
+	position: relative;
 	height: 100%;
 	width: 100%;
 	background: #f0f0f0;
@@ -244,6 +318,37 @@ nav li:first-child a:hover
 	line-height: 27px;
 }
 
+.products {
+	overflow: auto;
+}
+
+.wrapper {
+	margin: 0px auto;
+	height: 100%;
+	width: 90%;
+	background: #f0f0f0;
+}
+
+.tile {
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+	margin-left: 0px;
+	margin-bottom: 25px;
+	text-align: center;
+	position: relative;
+}
+
+.item {
+	vertical-align: middle;
+	display: inline-block;
+	background-color: #e3e1e1;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding: 20px 14px 14px 14px;
+}
+
 
 /* NAVIGATION ANNIMATION */
 nav {
@@ -257,7 +362,7 @@ nav {
 	border-radius: 8px;
 	
 	/* starting point */
-	opacity: .3;
+	opacity: 0;
 	-webkit-transform: translate3d(5%,0,0)scale(.97);
 	-moz-transform: translate3d(5%,0,0)scale(.97);
 	transform: translate3d(5%,0,0)scale(.97);
@@ -335,13 +440,13 @@ nav.close {
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
-	z-index: 1;
 }
 
 /*Content Sliding Open Effect*/
 header.open,
 .content.open 
 {   
+
 	-webkit-transform: translate3d(240px,0,0);
 	-webkit-animation: open .5s ease-in-out;
 	
@@ -393,8 +498,8 @@ header.close,
 	100%  {transform: translate3d(0,0,0);}
 }
 
-}
 
+}
 @media only screen and (min-width: 550px) and (max-width: 780px) {
 
 #hero-text {
@@ -404,13 +509,17 @@ header.close,
 }
 
 }
-
 @media only screen and (min-width: 1000px) {
 
 #hero-text {
 	padding-top: 43px;
 }
 
+.tile {
+	width: 29%;
+}
+
+}
 @media only screen and (min-width: 1150px) {
 
 #hero-text {
@@ -418,9 +527,16 @@ header.close,
 	padding-top: 43px;
 	font-size: 25px;
 	line-height: 40px;
-
 }
 
+}
+@media only screen and (min-width: 1250px) {
+
+.tile {
+	width: 20%;
+}
+
+}
 @media only screen and (min-width: 1400px) {
 
 #hero-text {

@@ -3,6 +3,7 @@ img {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	vertical-align: middle;
+	border: 1px solid #b6b4b4;
 }
 
 body {
@@ -28,10 +29,6 @@ body {
 a {text-decoration: none;}
 
 .container {
-	overflow: hidden;
-	min-height: 100%;
-	background-color: #F0F0F0;
-	background-size: cover;
 	z-index: 1;
 
 /*  Prevents Flickering  */
@@ -115,6 +112,11 @@ nav li a:hover {
 
 /*  Removable CSS  */
 
+.content {
+	min-height: 100%;
+	position: relative;
+}
+
 .hero {
 	height: 250px;
 	width: 100%;
@@ -135,6 +137,7 @@ nav li a:hover {
 }
 
 .products {
+	overflow: auto;
 	background: #f0f0f0;
 	padding-bottom: 220px;
 }
@@ -186,7 +189,7 @@ h3 a:hover {
 
 h6 {
 	padding-top: 9px;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 h6 a {
@@ -208,6 +211,7 @@ h6 a:hover {
 	background-color: #356aa4;
 	position: absolute;
 	bottom: 0;
+	left: 0;
 }
 
 #footer p {
@@ -293,12 +297,6 @@ nav li:first-child a.active,
 nav li:first-child a:hover 
 {border-radius: 10px 0 0 0;}
 
-.contentcontainer {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	background: #f0f0f0;
-}
 
 .hero{
 	height: 310px;
@@ -316,10 +314,6 @@ nav li:first-child a:hover
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 27px;
-}
-
-.products {
-	overflow: auto;
 }
 
 .wrapper {
@@ -349,6 +343,10 @@ nav li:first-child a:hover
 	padding: 20px 14px 14px 14px;
 }
 
+#footer p {
+	width: 95%;
+	font-size: 12px;
+}
 
 /* NAVIGATION ANNIMATION */
 nav {
